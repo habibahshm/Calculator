@@ -173,7 +173,7 @@ namespace Calculator
 
         private void dot_Click(object sender, EventArgs e)
         {
-            if (textBox1.TextLength < textBox1.MaxLength - 1 )
+            if (textBox1.TextLength < textBox1.MaxLength - 1 && !textBox1.Text.EndsWith("."))
                 textBox1.Text = textBox1.Text + ".";
         }
 
