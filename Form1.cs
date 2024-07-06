@@ -246,10 +246,6 @@ namespace Calculator
         private void bequal_Click(object sender, EventArgs e)
         {
             
-
-            if (FirstNumber == 0)
-                return;
-
             SecondNumber = Convert.ToDouble(textBox1.Text);
 
             if (Operation == "+")
