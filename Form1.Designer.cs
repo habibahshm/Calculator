@@ -317,6 +317,8 @@
             Controls.Add(n4);
             Controls.Add(n1);
             Controls.Add(textBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Calculator";
             Load += Form1_Load;

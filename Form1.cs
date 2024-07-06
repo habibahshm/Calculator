@@ -8,6 +8,8 @@ namespace Calculator
         double SecondNumber;
         double Result;
 
+        bool op_pressed;
+
         public Form1()
         {
             InitializeComponent();
@@ -177,30 +179,68 @@ namespace Calculator
 
         private void bmult_Click(object sender, EventArgs e)
         {
-            FirstNumber = Convert.ToDouble(textBox1.Text);
+            if (op_pressed)
+            {
+                bequal_Click(bequal, EventArgs.Empty);
+            }
+            else
+            {
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+            }
+
             textBox1.Text = "0";
             Operation = "*";
+            op_pressed = true;
+
         }
 
         private void bad_Click(object sender, EventArgs e)
         {
-            FirstNumber = Convert.ToDouble(textBox1.Text);
+            if (op_pressed)
+            {
+                bequal_Click(bequal, EventArgs.Empty);
+            }
+            else
+            {
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+               
+            }
+
             textBox1.Text = "0";
             Operation = "+";
+            op_pressed = true;
         }
 
         private void bdiv_Click(object sender, EventArgs e)
         {
-            FirstNumber = Convert.ToDouble(textBox1.Text);
+            if (op_pressed)
+            {
+                bequal_Click(bequal, EventArgs.Empty);
+            }
+            else
+            {
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+            }
+
             textBox1.Text = "0";
             Operation = "/";
+            op_pressed = true;
         }
 
         private void bsub_Click(object sender, EventArgs e)
         {
-            FirstNumber = Convert.ToDouble(textBox1.Text);
+            if (op_pressed)
+            {
+                bequal_Click(bequal, EventArgs.Empty);
+            }
+            else
+            {
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+               
+            }
             textBox1.Text = "0";
             Operation = "-";
+            op_pressed = true;
         }
 
         private void bequal_Click(object sender, EventArgs e)
@@ -244,6 +284,7 @@ namespace Calculator
                     FirstNumber = Result;
                 }
             }
+            op_pressed = false;
         }
 
         private void bac_Click(object sender, EventArgs e)
